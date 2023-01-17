@@ -6,7 +6,7 @@ st.write("This app is to increase your productivity")
 todos = functions.get_todos()
 
 def add_todo():
-    new_todo = st.session_state.todo + "\n"
+    new_todo = st.session_state.todoa + "\n"
     todos.append(new_todo)
     functions.write_todos(todos)
 
@@ -17,7 +17,7 @@ for index,todo in enumerate(todos):
         functions.write_todos(todos)
         del st.session_state[todo]
         st.experimental_rerun()
-st.text_input("ToDo for the list", placeholder="Enter todo here...", label_visibility="hidden", key='todo', on_change=add_todo)    
+st.text_input("ToDo for the list", placeholder="Enter todo here...", label_visibility="hidden", key='todoa', on_change=add_todo)
 
     
 
